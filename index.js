@@ -1,6 +1,7 @@
 export default function handler(req, res) {
+  res.setHeader('Content-Type', 'application/json');
   res.status(200).json({
     status: 'online',
-    message: 'API is running. Use the /api/khan endpoint for requests.'
+    endpoint: '/api/login-khan'
   });
 }
